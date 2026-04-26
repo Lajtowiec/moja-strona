@@ -1,3 +1,7 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/home/reveal";
 import { SectionHeading } from "@/components/home/section-heading";
 
@@ -13,7 +17,52 @@ type ProjectsSectionProps = {
   projects: readonly Project[];
 };
 
+const ferroscanScreens = [
+  {
+    src: "/ferroscan/ferroscan-analysis.png",
+    label: "Nowa analiza",
+    description: "Wprowadzanie parametrów wody i danych do raportu.",
+  },
+  {
+    src: "/ferroscan/ferroscan-results.png",
+    label: "Wyniki",
+    description: "Kalkulacje, tabela ocen i interpretacja parametrów.",
+  },
+  {
+    src: "/ferroscan/ferroscan-alerts.png",
+    label: "Rekomendacje",
+    description: "Alerty techniczne i proponowany ciąg technologiczny.",
+  },
+  {
+    src: "/ferroscan/ferroscan-ranking.png",
+    label: "Dobór złóż",
+    description: "Ranking złóż filtracyjnych i dopasowanie hydrauliczne.",
+  },
+  {
+    src: "/ferroscan/ferroscan-report.png",
+    label: "Raport PDF",
+    description: "Podgląd wydruku z anonimizowanymi danymi raportu.",
+  },
+] as const;
+
+const ferroscanHighlights = [
+  "formularz analizy parametrów wody",
+  "ocena przekroczeń i statusów",
+  "alerty inżynierskie",
+  "rekomendowany ciąg technologiczny",
+  "ranking złóż filtracyjnych",
+  "generowanie raportu PDF",
+] as const;
+
 export function ProjectsSection({ projects }: ProjectsSectionProps) {
+  const [activeScreenIndex, setActiveScreenIndex] = useState(1);
+  const screenViewportRef = useRef<HTMLDivElement | null>(null);
+  const activeScreen = ferroscanScreens[activeScreenIndex] ?? ferroscanScreens[0];
+
+  useEffect(() => {
+    screenViewportRef.current?.scrollTo({ top: 0, behavior: "instant" });
+  }, [activeScreenIndex]);
+
   return (
     <section id="aplikacje" className="section-shell py-8 md:py-12">
       <div className="space-y-8">
@@ -21,88 +70,125 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
           <SectionHeading
             eyebrow="Aplikacje"
             title="Projekty cyfrowe zaprojektowane pod realne potrzeby techniczne"
-            description="Ta sekcja jest przygotowana tak, aby łatwo rozwijać ją o kolejne wdrożenia, studia przypadków, zrzuty ekranu i szczegółowe opisy funkcjonalności."
+            description="Przykłady narzędzi, które porządkują dane, wspierają analizę techniczną i pomagają szybciej przejść od parametrów wejściowych do czytelnej rekomendacji."
           />
         </Reveal>
 
-        <div className="grid gap-6">
+        <Reveal>
+          <article className="interactive-card grid gap-8 p-5 md:p-7 xl:grid-cols-[1.08fr_0.92fr] xl:items-center">
+            <div className="grid gap-4">
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-cyan-300/18 bg-slate-950/60 p-3 shadow-[0_22px_60px_rgba(0,0,0,0.25)]">
+                <div
+                  ref={screenViewportRef}
+                  className="h-[30rem] overflow-y-auto overscroll-contain rounded-[1.35rem] [scrollbar-color:rgba(98,220,255,0.5)_rgba(15,23,42,0.6)] [scrollbar-width:thin] md:h-[34rem]"
+                >
+                  <Image
+                    key={activeScreen.src}
+                    src={activeScreen.src}
+                    alt={`FerroScan - ${activeScreen.label}`}
+                    width={1080}
+                    height={2138}
+                    sizes="(max-width: 768px) 100vw, 48vw"
+                    className="h-auto w-full"
+                  />
+                </div>
+                <div className="pointer-events-none absolute inset-x-3 bottom-3 h-28 rounded-b-[1.35rem] bg-gradient-to-t from-slate-950/88 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-100">
+                    FerroScan
+                  </p>
+                  <p className="mt-2 text-lg font-semibold text-white">{activeScreen.description}</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+                {ferroscanScreens.map((screen, index) => {
+                  const isActive = index === activeScreenIndex;
+
+                  return (
+                    <button
+                      key={screen.src}
+                      type="button"
+                      onClick={() => setActiveScreenIndex(index)}
+                      aria-pressed={isActive}
+                      className={`overflow-hidden rounded-[1.25rem] border bg-slate-950/44 text-left ${
+                        isActive
+                          ? "border-cyan-300/55 shadow-[0_0_0_1px_rgba(98,220,255,0.18),0_18px_38px_rgba(8,145,178,0.16)]"
+                          : "border-white/12 hover:border-cyan-300/30"
+                      }`}
+                    >
+                      <Image
+                        src={screen.src}
+                        alt={`FerroScan - ${screen.label}`}
+                        width={1080}
+                        height={2138}
+                        sizes="(max-width: 768px) 50vw, 16vw"
+                        className="h-48 w-full object-cover object-top sm:h-56 lg:h-44"
+                      />
+                      <span className="block border-t border-white/10 px-3 py-3">
+                        <p className="text-sm font-semibold text-white">{screen.label}</p>
+                        <p className="mt-1 text-xs leading-5 text-slate-300">{screen.description}</p>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="flex h-full flex-col">
+              <div>
+                <span className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-200">
+                  Aplikacja mobilna
+                </span>
+                <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-[2rem]">
+                  FerroScan
+                </h3>
+                <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200">
+                  Narzędzie wspierające analizę parametrów wody i porządkowanie decyzji technicznych:
+                  od danych wejściowych, przez ocenę przekroczeń, po rekomendacje technologiczne i
+                  raport PDF.
+                </p>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {ferroscanHighlights.map((tag) => (
+                  <span key={tag} className="chip">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 rounded-3xl border border-cyan-300/18 bg-cyan-300/8 px-5 py-5">
+                <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-100">Zakres</p>
+                <p className="mt-3 text-sm leading-7 text-slate-200">
+                  Projekt pokazuje praktyczne połączenie wiedzy branżowej, logiki obliczeniowej,
+                  czytelnego interfejsu i generowania dokumentu, który może być dalej omówiony lub
+                  uzupełniony przez specjalistę.
+                </p>
+              </div>
+            </div>
+          </article>
+        </Reveal>
+
+        <div className="grid gap-5 md:grid-cols-3">
           {projects.map((project, index) => (
             <Reveal key={project.name} delay={index * 90}>
-              <article className="interactive-card grid gap-6 p-5 md:p-7 xl:grid-cols-[1.05fr_0.95fr] xl:items-center">
-                <div className="product-preview p-5">
-                  <div className="product-screen overflow-hidden">
-                    <div className="flex items-center justify-between border-b border-white/12 px-4 py-3">
-                      <div className="flex gap-2">
-                        <span className="h-2.5 w-2.5 rounded-full bg-rose-300/80" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-amber-300/80" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-emerald-300/80" />
-                      </div>
-                      <span className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-400">
-                        Preview 0{index + 1}
-                      </span>
-                    </div>
-
-                    <div className="product-screen-grid grid h-[calc(100%-53px)] grid-cols-[1.2fr_0.8fr] gap-4 p-4">
-                      <div className="rounded-2xl border border-white/12 bg-cyan-300/8 p-4">
-                        <div className="h-3 w-28 rounded-full bg-white/16" />
-                        <div className="mt-4 grid gap-3">
-                          <div className="h-20 rounded-2xl bg-white/8" />
-                          <div className="grid grid-cols-2 gap-3">
-                            <div className="h-14 rounded-2xl bg-white/8" />
-                            <div className="h-14 rounded-2xl bg-cyan-300/14" />
-                          </div>
-                          <div className="h-24 rounded-2xl bg-white/8" />
-                        </div>
-                      </div>
-
-                      <div className="grid gap-3">
-                        <div className="rounded-2xl border border-white/12 bg-white/8 p-4">
-                          <div className="h-3 w-16 rounded-full bg-white/16" />
-                          <div className="mt-4 h-20 rounded-2xl bg-gradient-to-br from-cyan-300/26 to-blue-400/14" />
-                        </div>
-                        <div className="rounded-2xl border border-white/12 bg-white/8 p-4">
-                          <div className="h-3 w-20 rounded-full bg-white/16" />
-                          <div className="mt-4 space-y-2">
-                            <div className="h-2 rounded-full bg-white/14" />
-                            <div className="h-2 w-5/6 rounded-full bg-white/14" />
-                            <div className="h-2 w-3/4 rounded-full bg-white/14" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex h-full flex-col">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <span className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-200">
-                        {project.category}
-                      </span>
-                      <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-[2rem]">
-                        {project.name}
-                      </h3>
-                    </div>
-                    <span className="rounded-2xl border border-white/14 px-3 py-2 font-mono text-xs text-slate-200">
-                      0{index + 1}
+              <article className="interactive-card flex h-full flex-col p-6">
+                <span className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-200">
+                  {project.category}
+                </span>
+                <h3 className="mt-4 text-xl font-semibold tracking-tight text-white">{project.name}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-200">{project.description}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="chip">
+                      {tag}
                     </span>
-                  </div>
-
-                  <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200">{project.description}</p>
-
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="chip">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 rounded-3xl border border-cyan-300/18 bg-cyan-300/8 px-5 py-5">
-                    <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-100">Efekt</p>
-                    <p className="mt-3 text-sm leading-7 text-slate-200">{project.outcome}</p>
-                  </div>
+                  ))}
                 </div>
+                <p className="mt-5 border-t border-white/10 pt-5 text-sm leading-7 text-slate-300">
+                  {project.outcome}
+                </p>
               </article>
             </Reveal>
           ))}
