@@ -28,7 +28,7 @@ type AboutSectionProps = {
 export function AboutSection({ about, highlights }: AboutSectionProps) {
   return (
     <section id="o-mnie" className="section-shell py-8 md:py-12">
-      <Reveal className="section-card grid gap-10 px-7 py-10 md:grid-cols-[0.92fr_1.08fr] md:px-10 md:py-12">
+      <div className="section-card grid gap-10 px-7 py-10 md:grid-cols-[0.92fr_1.08fr] md:px-10 md:py-12">
         <SectionHeading
           eyebrow={about.eyebrow}
           title={about.title}
@@ -71,7 +71,7 @@ export function AboutSection({ about, highlights }: AboutSectionProps) {
             ))}
           </div>
         </div>
-      </Reveal>
+      </div>
     </section>
   );
 }
