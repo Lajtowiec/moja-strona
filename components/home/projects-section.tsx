@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/home/reveal";
 import { SectionHeading } from "@/components/home/section-heading";
@@ -165,6 +166,12 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                   czytelnego interfejsu i generowania dokumentu, który może być dalej omówiony lub
                   uzupełniony przez specjalistę.
                 </p>
+              </div>
+
+              <div className="mt-6">
+                <Link href="/pl/ferroscan/polityka-prywatnosci" className="button-secondary">
+                  Polityka prywatności FerroScan
+                </Link>
               </div>
             </div>
           </article>

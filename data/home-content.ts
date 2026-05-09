@@ -167,8 +167,8 @@ export const homeContent = {
     title: "Sekcja kontaktowa do dalszego uzupełnienia.",
     description:
       "To miejsce można rozbudować o docelowe dane kontaktowe, dodatkowe kanały komunikacji oraz bardziej szczegółowe informacje.",
-    email: "kontakt@do-uzupelnienia.pl",
-    emailDescription: "Adres roboczy do podmiany lub uzupełnienia.",
+    email: "kontakt@tomaszgzella.pl",
+    emailDescription: "Adres do kontaktu w sprawach technicznych, projektowych i cyfrowych.",
     placeholderTitle: "Miejsce na kolejne informacje",
     placeholderDescription:
       "Tutaj można dodać dodatkowe dane, linki lub elementy kontaktowe w kolejnej wersji strony.",
