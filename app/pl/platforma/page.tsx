@@ -5,11 +5,11 @@ import { SiteFooter } from "@/components/home/site-footer";
 export const metadata: Metadata = {
   title: "Platforma Edukacyjna PAE | Symulator egzaminu",
   description:
-    "Platforma Edukacyjna PAE to webowy symulator egzaminu z bazą zweryfikowanych pytań, konfiguracją testu i retro ekranem za perfekcyjny wynik.",
+    "Platforma Edukacyjna PAE to webowy symulator egzaminu z bazą zweryfikowanych pytań, konfiguracją testu i czytelnym podsumowaniem wyniku.",
   openGraph: {
     title: "Platforma Edukacyjna PAE",
     description:
-      "Symulator egzaminu przygotowany dla studentów: realistyczne pytania, tryb jedno- i wielokrotnego wyboru oraz nostalgiczny akcent retro.",
+      "Symulator egzaminu przygotowany dla studentów: realistyczne pytania, tryb jedno- i wielokrotnego wyboru oraz praktyczne podsumowanie testu.",
     locale: "pl_PL",
     type: "website",
   },
@@ -32,9 +32,9 @@ const features = [
       "Tryby 5, 10, 20 i 30 pytań pozwalają zrobić szybką powtórkę albo pełniejszy trening.",
   },
   {
-    title: "Retro nagroda",
+    title: "Przejrzysty wynik",
     description:
-      "Perfekcyjny wynik odblokowuje ekran JANUSZ w klimacie SNES/CRT, z animacjami i grillową nutą humoru.",
+      "Po zakończeniu testu użytkownik otrzymuje jasne podsumowanie, które pomaga ocenić gotowość do zaliczenia.",
   },
 ] as const;
 
@@ -146,13 +146,13 @@ export default function PlatformaPage() {
                   ))}
                 </div>
 
-                <div className="mt-5 rounded-2xl border border-amber-300/20 bg-amber-300/8 p-4">
-                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber-100">
-                    Easter egg
+                <div className="mt-5 rounded-2xl border border-cyan-300/16 bg-cyan-300/8 p-4">
+                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-100">
+                    Podsumowanie
                   </p>
                   <p className="mt-3 text-sm leading-7 text-slate-200">
-                    100% punktów odblokowuje ekran JANUSZ z retro klimatem CRT i finałem,
-                    który wynagradza skupienie czymś bardziej zapamiętywalnym niż zwykły komunikat.
+                    Wynik końcowy pozwala szybko sprawdzić skuteczność powtórki i wrócić do materiału,
+                    który wymaga jeszcze utrwalenia.
                   </p>
                 </div>
               </div>

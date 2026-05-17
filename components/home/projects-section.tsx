@@ -60,7 +60,7 @@ const platformHighlights = [
   "jedno- i wielokrotny wybór",
   "testy 5 / 10 / 20 / 30 pytań",
   "tryb webowy Flutter",
-  "retro ekran JANUSZ za 100%",
+  "podsumowanie wyniku",
 ] as const;
 
 export function ProjectsSection({ projects }: ProjectsSectionProps) {
@@ -222,12 +222,13 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                   ))}
                 </div>
 
-                <div className="mt-5 rounded-2xl border border-amber-300/20 bg-amber-300/8 p-4">
-                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber-100">
-                    100% odblokowuje finał
+                <div className="mt-5 rounded-2xl border border-cyan-300/16 bg-cyan-300/8 p-4">
+                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-100">
+                    Wynik końcowy
                   </p>
                   <p className="mt-3 text-sm leading-7 text-slate-200">
-                    JANUSZ w klimacie SNES/CRT: mały, retro akcent za perfekcyjne opanowanie materiału.
+                    Po zakończeniu testu użytkownik otrzymuje czytelne podsumowanie, które pomaga
+                    szybko ocenić poziom przygotowania do zaliczenia.
                   </p>
                 </div>
               </div>
