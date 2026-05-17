@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "question": "Dyrektywa EPBD ustanawia wymagania między innymi w zakresie:",
+    "options": [
+      {"id": "a", "text": "Minimalnych wymagań charakterystyki energetycznej"},
+      {"id": "b", "text": "Przeciętnych wymagań charakterystyki energetycznej"},
+      {"id": "c", "text": "Maksymalnych wymagań charakterystyki energetycznej"}
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "Zgodnie z dyrektywą EPBD państwa członkowskie ustalają minimalne wymagania charakterystyki energetycznej budynków."
+  },
+  {
+    "id": 2,
+    "question": "Dyrektywa EPBD ustanawia, że minimalne wymagania w zakresie systemów technicznych budynku są wymagane, jeżeli systemy te są:",
+    "options": [
+      {"id": "a", "text": "Instalowane"},
+      {"id": "b", "text": "Modernizowane"},
+      {"id": "c", "text": "Naprawiane"}
+    ],
+    "correctAnswers": ["a", "b"],
+    "explanation": "Wymagania dotyczą systemów technicznych budynków w przypadku ich instalacji oraz modernizacji."
+  },
+  {
+    "id": 3,
+    "question": "Ważniejsza renowacja według dyrektywy EPBD to taka, w której koszt prac:",
+    "options": [
+      {"id": "a", "text": "Przekracza 15% wartości budynku"},
+      {"id": "b", "text": "Przekracza 20% wartości budynku"},
+      {"id": "c", "text": "Przekracza 25% wartości budynku"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "Ważniejsza renowacja występuje, gdy koszt prac przekracza 25% wartości budynku bez wartości gruntu."
+  },
+  {
+    "id": 4,
+    "question": "Ważniejsza renowacja według dyrektywy EPBD oznacza renowację budynku, której podlega ponad:",
+    "options": [
+      {"id": "a", "text": "15% powierzchni przegród zewnętrznych"},
+      {"id": "b", "text": "20% powierzchni przegród zewnętrznych"},
+      {"id": "c", "text": "25% powierzchni przegród zewnętrznych"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "Kryterium powierzchniowe ważniejszej renowacji to objęcie pracami ponad 25% powierzchni przegród zewnętrznych."
+  },
+  {
+    "id": 5,
+    "question": "Według dyrektywy EPBD metodologia charakterystyki energetycznej budynku jest ustalana po uwzględnieniu co najmniej następujących aspektów:",
+    "options": [
+      {"id": "a", "text": "Pojemności cieplnej"},
+      {"id": "b", "text": "Izolacji cieplnej"},
+      {"id": "c", "text": "Oporu dyfuzyjne"}
+    ],
+    "correctAnswers": ["a", "b"],
+    "explanation": "Metodologia uwzględnia właściwości cieplne budynku, w tym izolację oraz pojemność cieplną."
+  },
+  {
+    "id": 6,
+    "question": "Zgodnie z ustawą o charakterystyce energetycznej budynków świadectwo charakterystyki energetycznej sporządza się w przypadku:",
+    "options": [
+      {"id": "a", "text": "Zbycia na podstawie umowy sprzedaży"},
+      {"id": "b", "text": "Wynajmowania"},
+      {"id": "c", "text": "Objęcia ochroną zabytków"}
+    ],
+    "correctAnswers": ["a", "b"],
+    "explanation": "Świadectwo jest wymagane przy sprzedaży lub wynajmie budynku lub jego części."
+  },
+  {
+    "id": 7,
+    "question": "Do złożenia wniosku o udzielenie pozwolenia na użytkowanie budynku inwestor powinien załączyć:",
+    "options": [
+      {"id": "a", "text": "Elektroniczną wersję świadectwa charakterystyki energetycznej"},
+      {"id": "b", "text": "Wydruk świadectwa przekazanego w formie elektronicznej"},
+      {"id": "c", "text": "Kopię świadectwa przekazanego w formie papierowej"}
+    ],
+    "correctAnswers": ["b", "c"],
+    "explanation": "Zależnie od formy przekazania, dołącza się kopię papierową lub wydruk wersji elektronicznej."
+  },
+  {
+    "id": 8,
+    "question": "Budynek wraz z wybranymi instalacjami powinien zapewniać spełnienie wymagań minimalnych w zakresie:",
+    "options": [
+      {"id": "a", "text": "Wartości wskaźnika EK"},
+      {"id": "b", "text": "Wartości wskaźnika EP"},
+      {"id": "c", "text": "Wartości współczynnika przenikania ciepła U"}
+    ],
+    "correctAnswers": ["b", "c"],
+    "explanation": "Wymagania minimalne w WT obejmują wskaźnik EP oraz izolacyjność cieplną przegród (U)."
+  },
+  {
+    "id": 9,
+    "question": "Wartości współczynnika przenikania ciepła Uc dla ścian zewnętrznych przy temperaturze wewnętrznej pomieszczenia Ti ≥ 16°C dla wszystkich rodzajów budynków nie mogą być większe niż Uc max:",
+    "options": [
+      {"id": "a", "text": "0,15 W/(m²K)"},
+      {"id": "b", "text": "0,20 W/(m²K)"},
+      {"id": "c", "text": "0,25 W/(m²K)"}
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "Zgodnie z WT 2021, maksymalna wartość Uc dla ścian zewnętrznych wynosi 0,20 W/(m²K)."
+  },
+  {
+    "id": 10,
+    "question": "Wartości współczynnika przenikania ciepła Uc dla stropodachów przy temperaturze wewnętrznej pomieszczenia Ti ≥ 16°C dla wszystkich rodzajów budynków nie mogą być większe niż Uc max:",
+    "options": [
+      {"id": "a", "text": "0,15 W/(m²K)"},
+      {"id": "b", "text": "0,20 W/(m²K)"},
+      {"id": "c", "text": "0,25 W/(m²K)"}
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "Zgodnie z WT 2021, maksymalna wartość Uc dla stropodachów wynosi 0,15 W/(m²K)."
+  },
+  {
+    "id": 11,
+    "question": "Wartości współczynnika przenikania ciepła Uc dla okien przy temperaturze wewnętrznej pomieszczenia Ti ≥ 16°C dla wszystkich rodzajów budynków nie mogą być większe niż Uc max:",
+    "options": [
+      {"id": "a", "text": "0,7 W/(m²K)"},
+      {"id": "b", "text": "0,9 W/(m²K)"},
+      {"id": "c", "text": "1,1 W/(m²K)"}
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "Zgodnie z WT 2021, maksymalna wartość Uc dla okien (z wyjątkiem dachowych) wynosi 0,9 W/(m²K)."
+  },
+  {
+    "id": 12,
+    "question": "Metodologia wyznaczania charakterystyki energetycznej w kraju opiera się na obliczeniu wskaźników:",
+    "options": [
+      {"id": "a", "text": "EU"},
+      {"id": "b", "text": "EU i EK"},
+      {"id": "c", "text": "EU, EK i EP"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "Charakterystyka energetyczna budynku opisana jest trzema wskaźnikami: energią użytkową, końcową i pierwotną."
+  },
+  {
+    "id": 13,
+    "question": "Metoda zużyciowa wyznaczania charakterystyki energetycznej opiera się na rzeczywistym zużyciu nośników energii. Jakich?",
+    "options": [
+      {"id": "a", "text": "Ciepła sieciowego"},
+      {"id": "b", "text": "Gazu"},
+      {"id": "c", "text": "Oleju opałowego"}
+    ],
+    "correctAnswers": ["a", "b"],
+    "explanation": "Metodę zużyciową można stosować m.in. dla ciepła sieciowego i gazu (przy zachowaniu odpowiednich warunków)."
+  },
+  {
+    "id": 14,
+    "question": "W metodologii wyznaczania charakterystyki energetycznej wyznacza się wartości wskaźników w podanej kolejności:",
+    "options": [
+      {"id": "a", "text": "EP – EK – EU"},
+      {"id": "b", "text": "EK – EU – EP"},
+      {"id": "c", "text": "EU – EK – EP"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "Logika obliczeń prowadzi od zapotrzebowania budynku (EU), przez sprawność systemów (EK), do wpływu na środowisko (EP)."
+  },
+  {
+    "id": 15,
+    "question": "Działanie, którego celem jest osiągnięcie danego efektu przy wykorzystaniu jak najmniejszej ilości dostępnych zasobów lub osiągnięcie najlepszego rezultatu przy wykorzystaniu określonej ilości zasobów to:",
+    "options": [
+      {"id": "a", "text": "Efektywność energetyczna"},
+      {"id": "b", "text": "Efektywność ekologiczna"},
+      {"id": "c", "text": "Efektywność ekonomiczna"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "Jest to klasyczna definicja efektywności ekonomicznej (zasada racjonalnego gospodarowania)."
+  },
+  {
+    "id": 16,
+    "question": "Do dynamicznych kryteriów oceny inwestycji zaliczamy między innymi:",
+    "options": [
+      {"id": "a", "text": "SPBT"},
+      {"id": "b", "text": "NPV"},
+      {"id": "c", "text": "IRR"}
+    ],
+    "correctAnswers": ["b", "c"],
+    "explanation": "NPV i IRR uwzględniają zmianę wartości pieniądza w czasie (dyskontowanie), SPBT jest wskaźnikiem statycznym."
+  },
+  {
+    "id": 17,
+    "question": "Inwestycja jest opłacalna, jeżeli wskaźnik NPV wynosi:",
+    "options": [
+      {"id": "a", "text": "NPV < 0"},
+      {"id": "b", "text": "NPV = 0"},
+      {"id": "c", "text": "NPV > 0"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "Dodatnia wartość NPV oznacza, że stopa zwrotu z inwestycji jest wyższa od stopy dyskontowej."
+  },
+  {
+    "id": 18,
+    "question": "Dla inwestycji zachodzi zależność – jeżeli stopa dyskontowa jest mniejsza od IRR, to:",
+    "options": [
+      {"id": "a", "text": "NPV < 0"},
+      {"id": "b", "text": "NPV = 0"},
+      {"id": "c", "text": "NPV > 0"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "IRR to stopa dyskontowa, przy której NPV=0. Jeśli aktualna stopa jest mniejsza, inwestycja generuje zysk netto (NPV > 0)."
+  },
+  {
+    "id": 19,
+    "question": "Na dokładność badań termowizyjnych ma wpływ między innymi:",
+    "options": [
+      {"id": "a", "text": "Temperatura otoczenia"},
+      {"id": "b", "text": "Temperatura atmosfery"},
+      {"id": "c", "text": "Emisyjność"}
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "Wszystkie te parametry muszą zostać wprowadzone do kamery w celu poprawnej interpretacji radiogramu."
+  },
+  {
+    "id": 20,
+    "question": "W ramach przedsięwzięcia termomodernizacyjnego można realizować:",
+    "options": [
+      {"id": "a", "text": "Podłączenie do sieci cieplnej"},
+      {"id": "b", "text": "Wymianę kotła CO na kocioł gazowy"},
+      {"id": "c", "text": "Wymianę kotła CO na kocioł olejowy"}
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "Definicja ustawowa obejmuje wykonanie przyłącza technicznego do scentralizowanego źródła ciepła."
+  },
+  {
+    "id": 21,
+    "question": "Premia termomodernizacyjna przysługuje, jeżeli kwota zaciągniętego kredytu stanowi co najmniej:",
+    "options": [
+      {"id": "a", "text": "50% kosztów przedsięwzięcia i nie mniej niż wysokość premii"},
+      {"id": "b", "text": "40% kosztów przedsięwzięcia i nie mniej niż wysokość premii"},
+      {"id": "c", "text": "50% kosztów przedsięwzięcia"}
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "Kredyt musi pokrywać min. 50% kosztów i nie może być mniejszy niż sama premia."
+  },
+  {
+    "id": 22,
+    "question": "Wysokość premii remontowej przy przedsięwzięciu remontowym stanowi:",
+    "options": [
+      {"id": "a", "text": "25% kosztów przedsięwzięcia"},
+      {"id": "b", "text": "26% kosztów przedsięwzięcia"},
+      {"id": "c", "text": "27% kosztów przedsięwzięcia"}
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "Standardowa wysokość premii remontowej to 25% kosztów przedsięwzięcia."
+  },
+  {
+    "id": 23,
+    "question": "Przedsięwzięcie termomodernizacyjne musi przynosić oszczędność energii, której minimalny poziom został określony w zależności od rodzaju tego przedsięwzięcia, w tym między innymi:",
+    "options": [
+      {"id": "a", "text": "Dla wysokosprawnej kogeneracji nie został określony"},
+      {"id": "b", "text": "Dla wysokosprawnej kogeneracji został określony na poziomie 10%"},
+      {"id": "c", "text": "Dla OZE został określony na poziomie 10%"}
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "W przypadku kogeneracji oraz OZE ustawa nie definiuje minimalnego progu oszczędności procentowej."
+  },
+  {
+    "id": 24,
+    "question": "Audyt energetyczny i część audytu remontowego sporządza się w języku polskim w formie:",
+    "options": [
+      {"id": "a", "text": "Elektronicznej i pisemnej"},
+      {"id": "b", "text": "Pisemnej"},
+      {"id": "c", "text": "Elektronicznej"}
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "Zgodnie z rozporządzeniem, audyt sporządza się w formie pisemnej."
+  },
+  {
+    "id": 25,
+    "question": "Według rozporządzenia o formie i zakresie audytów ulepszenie remontowe:",
+    "options": [
+      {"id": "a", "text": "Nie jest związane z oszczędnością energii"},
+      {"id": "b", "text": "Jest związane z oszczędnością energii"},
+      {"id": "c", "text": "Jest związane z oszczędnością kosztów eksploatacji"}
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "Ulepszenie remontowe musi skutkować oszczędnością energii zgodnie z wymaganiami ustawy."
+  },
+  {
+    "id": 26,
+    "question": "Według rozporządzenia w sprawie audytów przez optymalny wariant przedsięwzięcia remontowego rozumie się:",
+    "options": [
+      {"id": "a", "text": "Zestaw ulepszeń wybrany zgodnie z algorytmem oceny energooszczędności"},
+      {"id": "b", "text": "Zestaw ulepszeń wybrany zgodnie z algorytmem oceny opłacalności"},
+      {"id": "c", "text": "Zestaw ulepszeń wybrany zgodnie z algorytmem oceny ekologiczności"}
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "Optymalizacja w audycie polega na wyborze wariantu o najlepszej opłacalności ekonomicznej."
+  },
+  {
+    "id": 27,
+    "question": "Dokumentacja wykonania kolejnych kroków optymalizacyjnych algorytmu oceny przedsięwzięcia termomodernizacyjnego lub wskazania przedsięwzięcia remontowego dla badanego budynku obejmuje:",
+    "options": [
+      {"id": "a", "text": "Tylko ulepszenia uzasadnione technicznie"},
+      {"id": "b", "text": "Tylko ulepszenia uzasadnione ekonomicznie"},
+      {"id": "c", "text": "Tylko ulepszenia uzasadnione technicznie i ekonomicznie"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "Analizie podlegają ulepszenia, które są możliwe do wykonania i mają uzasadnienie finansowe."
+  },
+  {
+    "id": 28,
+    "question": "W audycie energetycznym budynku algorytm oceny przedsięwzięcia termomodernizacyjnego i wyboru jego optymalnego wariantu składa się z:",
+    "options": [
+      {"id": "a", "text": "6 kroków"},
+      {"id": "b", "text": "5 kroków"},
+      {"id": "c", "text": "4 kroków"}
+    ],
+    "correctAnswers": ["c"],
+    "explanation": "Procedura optymalizacyjna w audycie energetycznym budynku składa się z 4 głównych kroków."
+  },
+  {
+    "id": 29,
+    "question": "Wartość wskaźnika EP dla budynków mieszkalnych wielorodzinnych powinna być mniejsza lub równa wartości maksymalnej wynoszącej:",
+    "options": [
+      {"id": "a", "text": "65"},
+      {"id": "b", "text": "70"},
+      {"id": "c", "text": "75"}
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "Dla budynków wielorodzinnych od 2021 roku limit EP na ogrzewanie, wentylację i CWU wynosi 65 kWh/(m²rok)."
+  },
+  {
+    "id": 30,
+    "question": "Wartość wskaźnika EP dla budynków mieszkalnych jednorodzinnych powinna być mniejsza lub równa wartości maksymalnej wynoszącej:",
+    "options": [
+      {"id": "a", "text": "65"},
+      {"id": "b", "text": "70"},
+      {"id": "c", "text": "75"}
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "Dla budynków jednorodzinnych od 2021 roku limit EP na ogrzewanie, wentylację i CWU wynosi 70 kWh/(m²rok)."
+  }
+]

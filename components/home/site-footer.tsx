@@ -8,6 +8,9 @@ export function SiteFooter() {
         <div className="flex flex-col gap-3 md:items-end">
           <p>Inżynier środowiska • Aplikacje techniczne • Profil zawodowy online</p>
           <div className="flex flex-wrap gap-x-4 gap-y-2">
+            <Link href="/pl/platforma" className="hover:text-white">
+              Platforma PAE
+            </Link>
             <Link href="/pl/polityka-prywatnosci" className="hover:text-white">
               Polityka prywatności
             </Link>

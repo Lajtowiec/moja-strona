@@ -1,0 +1,274 @@
+[
+  {
+    "id": 1,
+    "question": "Który z poniższych wskaźników jest charakterystyczny dla obiektów naprawialnych?",
+    "options": [
+      {"id": "A", "text": "R(t)"},
+      {"id": "B", "text": "K"},
+      {"id": "C", "text": "Tn"},
+      {"id": "D", "text": "Tg"}
+    ],
+    "correctAnswers": ["B", "C"],
+    "explanation": "Wskaźnik gotowości K oraz średni czas niesprawności Tn dotyczą obiektów naprawialnych, ponieważ uwzględniają możliwość odnowy systemu po awarii. R(t) i Tg odnoszą się głównie do obiektów nienaprawialnych."
+  },
+  {
+    "id": 2,
+    "question": "Które stwierdzenia dotyczące niezawodności systemu wodociągowego są prawdziwe?",
+    "options": [
+      {"id": "A", "text": "System musi dostarczać wodę o odpowiedniej jakości."},
+      {"id": "B", "text": "System musi działać wyłącznie w warunkach nominalnych."},
+      {"id": "C", "text": "System powinien zapewniać wymagane ciśnienie."},
+      {"id": "D", "text": "System musi działać w określonym czasie eksploatacji."}
+    ],
+    "correctAnswers": ["A", "C", "D"],
+    "explanation": "Definicja niezawodności systemu wodociągowego obejmuje dostarczanie wody o odpowiedniej jakości, ilości i ciśnieniu przez określony czas eksploatacji. Nie ma wymogu działania wyłącznie w warunkach nominalnych."
+  },
+  {
+    "id": 3,
+    "question": "W metodach jednoparametrycznych zakłada się, że:",
+    "options": [
+      {"id": "A", "text": "Elementy są wielostanowe."},
+      {"id": "B", "text": "Odnowa elementów jest zupełna."},
+      {"id": "C", "text": "Zmienne losowe mają rozkład wykładniczy."},
+      {"id": "D", "text": "Czas oczekiwania na odnowę jest zerowy."}
+    ],
+    "correctAnswers": ["B", "C", "D"],
+    "explanation": "Metody jednoparametryczne bazują na uproszczonych założeniach: element po naprawie jest „jak nowy”, rozkłady są wykładnicze, a brygady remontowe dostępne natychmiast."
+  },
+  {
+    "id": 4,
+    "question": "Wskaż poprawne zależności dotyczące intensywności uszkodzeń λ:",
+    "options": [
+      {"id": "A", "text": "Im większe λ, tym większa niezawodność."},
+      {"id": "B", "text": "λ jest miarą awaryjności."},
+      {"id": "C", "text": "λ może być wyrażane w uszk./(km·rok)."},
+      {"id": "D", "text": "λ i ω(t) są parametrami równoważnymi przy strumieniu Poissona."}
+    ],
+    "correctAnswers": ["B", "C", "D"],
+    "explanation": "Intensywność uszkodzeń λ określa awaryjność systemu – im większa wartość λ, tym gorsza niezawodność. W przypadku strumienia Poissona λ i ω(t) są równoważne."
+  },
+  {
+    "id": 5,
+    "question": "Które z poniższych należą do metod dwuparametrycznych?",
+    "options": [
+      {"id": "A", "text": "Metoda minimalnych przekrojów niesprawności"},
+      {"id": "B", "text": "Metoda wzorów analitycznych"},
+      {"id": "C", "text": "Metoda drzewa uszkodzeń"},
+      {"id": "D", "text": "Metoda częstości uszkodzeń"}
+    ],
+    "correctAnswers": ["A", "C", "D"],
+    "explanation": "Metody dwuparametryczne wykorzystują dwa parametry niezawodnościowe, np. Tp i Tn. Metoda wzorów analitycznych należy do metod jednoparametrycznych."
+  },
+  {
+    "id": 6,
+    "question": "W systemie silnie spójnym:",
+    "options": [
+      {"id": "A", "text": "Elementy są całkowicie niezależne."},
+      {"id": "B", "text": "Zmiana jednego elementu wpływa na pozostałe."},
+      {"id": "C", "text": "System nie posiada komunikacji wewnętrznej."},
+      {"id": "D", "text": "Zachodzi zależność funkcjonalna pomiędzy elementami."}
+    ],
+    "correctAnswers": ["B", "D"],
+    "explanation": "System silnie spójny cechuje się wzajemnym oddziaływaniem elementów – zmiana jednego wpływa na inne części systemu."
+  },
+  {
+    "id": 7,
+    "question": "Które czynniki wpływają na awaryjność infrastruktury wodociągowej?",
+    "options": [
+      {"id": "A", "text": "Rodzaj gruntu"},
+      {"id": "B", "text": "Liczba połączeń przewodu"},
+      {"id": "C", "text": "Temperatura powietrza w pomieszczeniu operatora"},
+      {"id": "D", "text": "Ciśnienie robocze przewodu"}
+    ],
+    "correctAnswers": ["A", "B", "D"],
+    "explanation": "Na awaryjność wpływają zarówno czynniki konstrukcyjne przewodu, jak i warunki gruntowe oraz eksploatacyjne, np. ciśnienie robocze."
+  },
+  {
+    "id": 8,
+    "question": "W metodzie przeglądu zupełnego (MPZ):",
+    "options": [
+      {"id": "A", "text": "Uwzględnia się wszystkie możliwe stany elementarne systemu."},
+      {"id": "B", "text": "Wynik jest przybliżony."},
+      {"id": "C", "text": "Stosuje się ją dla systemów o niewielkiej liczbie elementów."},
+      {"id": "D", "text": "Najczęściej przyjmuje się kmax=2."}
+    ],
+    "correctAnswers": ["A", "C"],
+    "explanation": "MPZ daje wynik dokładny, ale wymaga przeanalizowania wszystkich stanów elementarnych, dlatego stosuje się ją głównie dla małych systemów."
+  },
+  {
+    "id": 9,
+    "question": "Które zdania dotyczące minimalnych dróg przepływu (MDP) są poprawne?",
+    "options": [
+      {"id": "A", "text": "MDP tworzy strukturę szeregową."},
+      {"id": "B", "text": "Wystarczy istnienie jednej MDP, aby system był sprawny."},
+      {"id": "C", "text": "MDP są równoważne przekrojom niesprawności."},
+      {"id": "D", "text": "Minimalna droga przepływu nie zawiera innej drogi jako podzbioru."}
+    ],
+    "correctAnswers": ["A", "B", "D"],
+    "explanation": "Minimalna droga przepływu to najmniejszy zbiór elementów zapewniających sprawność systemu. Istnienie jednej poprawnej drogi wystarcza do działania systemu."
+  },
+  {
+    "id": 10,
+    "question": "Uogólniony wskaźnik niezawodności Ku:",
+    "options": [
+      {"id": "A", "text": "Jest przeznaczony dla systemów zaopatrzenia w wodę."},
+      {"id": "B", "text": "Może być interpretowany jako stopień spełnienia wymagań przez system."},
+      {"id": "C", "text": "Zależy od wartości oczekiwanej niedoboru wody."},
+      {"id": "D", "text": "Jest równy wskaźnikowi gotowości K."}
+    ],
+    "correctAnswers": ["A", "B", "C"],
+    "explanation": "Ku określa, w jakim stopniu system spełnia wymagania użytkowników, uwzględniając niedobory wody lub ścieków. Nie jest tożsamy ze wskaźnikiem gotowości K."
+  },
+  {
+    "id": 11,
+    "question": "Dopasuj stan niezawodnościowy SZW do jego znaczenia:",
+    "matchingPairs": [
+      {"id": "1", "left": "NF", "right": "Niezawodne"},
+      {"id": "2", "left": "DF", "right": "Dopuszczalne"},
+      {"id": "3", "left": "UF", "right": "Uciążliwe"},
+      {"id": "4", "left": "ZF", "right": "Zawodne"}
+    ],
+    "explanation": "NF (Niezawodne), DF (Dopuszczalne), UF (Uciążliwe), ZF (Zawodne). Prawidłowe zaklasyfikowanie stanów od pełnej sprawności do awarii."
+  },
+  {
+    "id": 12,
+    "question": "Które z poniższych elementów wchodzą w skład wzoru na jednostkową intensywność uszkodzeń λ(Δt)?",
+    "options": [
+      {"id": "A", "text": "n(Δt) - liczba uszkodzeń"},
+      {"id": "B", "text": "L - długość przewodów"},
+      {"id": "C", "text": "Δt - przedział czasu"},
+      {"id": "D", "text": "K - wskaźnik gotowości"}
+    ],
+    "correctAnswers": ["A", "B", "C"],
+    "explanation": "Prawidłowy wzór ma postać: λ(Δt) = n(Δt) / (L * Δt). Wskaźnik gotowości K nie występuje w tym równaniu."
+  },
+  {
+    "id": 13,
+    "question": "Dopasuj pojęcie do definicji:",
+    "matchingPairs": [
+      {"id": "1", "left": "Element", "right": "Najmniejsza cząstka systemu, której struktury wewnętrznej nie analizuje się."},
+      {"id": "2", "left": "Układ", "right": "Zespół elementów wzajemnie na siebie oddziałujących."},
+      {"id": "3", "left": "System", "right": "Zwarta całość powołana do realizacji określonego celu."},
+      {"id": "4", "left": "Podsystem", "right": "Wyodrębniona część systemu o specyficznych funkcjach."}
+    ],
+    "explanation": "Podstawowe definicje w teorii systemów określają hierarchię i relacje pomiędzy częściami składowymi całości."
+  },
+  {
+    "id": 14,
+    "question": "Przechodzenie systemu od niezależności do spójności nazywa się __________ progresywną.",
+    "options": [
+      {"id": "A", "text": "dezintegracją"},
+      {"id": "B", "text": "integracją"},
+      {"id": "C", "text": "rekonstrukcją"},
+      {"id": "D", "text": "redundancją"}
+    ],
+    "correctAnswers": ["B"],
+    "explanation": "Integracja progresywna zwiększa stopień organizacji i spójności systemu."
+  },
+  {
+    "id": 15,
+    "question": "Dopasuj metodę do jej charakterystyki:",
+    "matchingPairs": [
+      {"id": "1", "left": "MPZ", "right": "Metoda przeglądu zupełnego - analizuje wszystkie możliwe stany."},
+      {"id": "2", "left": "MPCz", "right": "Metoda przeglądu częściowego - analizuje stany najbardziej prawdopodobne."},
+      {"id": "3", "left": "MWA", "right": "Metoda wzorów analitycznych - wykorzystuje schematy blokowe."},
+      {"id": "4", "left": "Metoda min. przekrojów", "right": "Analiza zbiorów elementów, których awaria przerywa drogi przepływu."}
+    ],
+    "explanation": "Różne metody analizy niezawodności stosuje się w zależności od złożoności systemu i wymaganej dokładności wyników."
+  },
+  {
+    "id": 16,
+    "question": "Które założenia są konieczne do stosowania wskaźnika gotowości K(t) dla procesu z odnową niezerową?",
+    "options": [
+      {"id": "A", "text": "Niezależność czasów pracy i odnowy"},
+      {"id": "B", "text": "Jednakowe rozkłady prawdopodobieństwa czasów pracy i odnowy"},
+      {"id": "C", "text": "Rozkład normalny czasów pracy"},
+      {"id": "D", "text": "Proces Poissona uszkodzeń"}
+    ],
+    "correctAnswers": ["A", "B"],
+    "explanation": "Model gotowości wymaga niezależności procesów pracy i odnowy oraz zgodności rozkładów prawdopodobieństwa."
+  },
+  {
+    "id": 17,
+    "question": "Jednoelementowy przekrój niesprawności oznacza:",
+    "options": [
+      {"id": "A", "text": "Element powtarzający się we wszystkich drogach przepływu"},
+      {"id": "B", "text": "Element, którego uszkodzenie powoduje utratę sprawności systemu"},
+      {"id": "C", "text": "Dowolny element o największej intensywności uszkodzeń"},
+      {"id": "D", "text": "Element należący do struktury równoległej"}
+    ],
+    "correctAnswers": ["A", "B"],
+    "explanation": "Uszkodzenie takiego elementu przerywa wszystkie możliwe drogi przepływu i powoduje niesprawność systemu."
+  },
+  {
+    "id": 18,
+    "question": "Które działania prowadzą do podniesienia niezawodności systemu?",
+    "options": [
+      {"id": "A", "text": "Zwiększenie intensywności uszkodzeń λ"},
+      {"id": "B", "text": "Zwiększenie intensywności odnowy μ"},
+      {"id": "C", "text": "Wprowadzenie rezerwy strukturalnej"},
+      {"id": "D", "text": "Wymiana elementów na bardziej niezawodne"}
+    ],
+    "correctAnswers": ["B", "C", "D"],
+    "explanation": "Podnoszenie niezawodności polega na ograniczaniu awarii i poprawie możliwości odnowy systemu."
+  },
+  {
+    "id": 19,
+    "question": "Dla struktury szeregowej:",
+    "options": [
+      {"id": "A", "text": "Uszkodzenie jednego elementu może spowodować uszkodzenie systemu."},
+      {"id": "B", "text": "Intensywność uszkodzeń systemu jest sumą intensywności elementów."},
+      {"id": "C", "text": "Wszystkie elementy muszą być sprawne."},
+      {"id": "D", "text": "Struktura posiada redundancję funkcjonalną."}
+    ],
+    "correctAnswers": ["A", "B", "C"],
+    "explanation": "W strukturze szeregowej awaria dowolnego elementu powoduje utratę sprawności całego systemu."
+  },
+  {
+    "id": 20,
+    "question": "Które stwierdzenia dotyczące niezawodności bezpieczeństwa są prawdziwe?",
+    "options": [
+      {"id": "A", "text": "Dotyczy zdarzeń skutkujących utratą zdrowia lub życia."},
+      {"id": "B", "text": "Dotyczy wyłącznie przerw w dostawie wody."},
+      {"id": "C", "text": "Zdarzenia tego typu występują bardzo często."},
+      {"id": "D", "text": "Jest związana z określonym prawdopodobieństwem wystąpienia zagrożenia."}
+    ],
+    "correctAnswers": ["A", "D"],
+    "explanation": "Niezawodność bezpieczeństwa odnosi się do zagrożeń dla zdrowia i życia ludzi, które występują rzadko, ale mają poważne skutki."
+  },
+  {
+    "id": 21,
+    "question": "Które elementy powinny zostać uwzględnione podczas oceny ryzyka zgodnie z Dyrektywą UE 2020/2184?",
+    "options": [
+      {"id": "A", "text": "Charakterystyka systemu zaopatrzenia w wodę"},
+      {"id": "B", "text": "Identyfikacja zagrożeń i zdarzeń niebezpiecznych"},
+      {"id": "C", "text": "Analiza wyłącznie kosztów eksploatacyjnych SUW"},
+      {"id": "D", "text": "Ocena ryzyka dla zdrowia ludzkiego"}
+    ],
+    "correctAnswers": ["A", "B", "D"],
+    "explanation": "Ocena ryzyka musi obejmować charakterystykę systemu, identyfikację zagrożeń oraz ocenę wpływu na zdrowie ludzi."
+  },
+  {
+    "id": 22,
+    "question": "Dopasuj pojęcie do analizy ryzyka:",
+    "matchingPairs": [
+      {"id": "1", "left": "Drzewo zdarzeń", "right": "Analiza skutków zdarzenia inicjującego."},
+      {"id": "2", "left": "Drzewo błędów", "right": "Analiza przyczyn zdarzenia szczytowego (awarii)."},
+      {"id": "3", "left": "Zdarzenie inicjujące", "right": "Pierwsze zdarzenie w sekwencji prowadzącej do awarii."},
+      {"id": "4", "left": "Suma logiczna", "right": "Bramka LUB (OR) w drzewie błędów."}
+    ],
+    "explanation": "Metody drzewne (ETA i FTA) to podstawowe narzędzia inżynierii bezpieczeństwa do identyfikacji zagrożeń."
+  },
+  {
+    "id": 23,
+    "question": "Które stwierdzenia dotyczące Planów Bezpieczeństwa Wodnego (PBW) są prawdziwe?",
+    "options": [
+      {"id": "A", "text": "PBW mają na celu ochronę zdrowia konsumentów wody."},
+      {"id": "B", "text": "PBW obejmują wyłącznie monitoring jakości wody."},
+      {"id": "C", "text": "PBW powinny zawierać procedury zarządzania ryzykiem."},
+      {"id": "D", "text": "PBW uwzględniają analizę całego systemu od ujęcia do konsumenta."}
+    ],
+    "correctAnswers": ["A", "C", "D"],
+    "explanation": "PBW obejmują kompleksowe zarządzanie bezpieczeństwem systemu wodociągowego – od ujęcia aż po punkt poboru przez konsumenta."
+  }
+]

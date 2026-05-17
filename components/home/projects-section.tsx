@@ -55,6 +55,14 @@ const ferroscanHighlights = [
   "generowanie raportu PDF",
 ] as const;
 
+const platformHighlights = [
+  "dwa zestawy pytań egzaminacyjnych",
+  "jedno- i wielokrotny wybór",
+  "testy 5 / 10 / 20 / 30 pytań",
+  "tryb webowy Flutter",
+  "retro ekran JANUSZ za 100%",
+] as const;
+
 export function ProjectsSection({ projects }: ProjectsSectionProps) {
   const [activeScreenIndex, setActiveScreenIndex] = useState(1);
   const screenViewportRef = useRef<HTMLDivElement | null>(null);
@@ -171,6 +179,97 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
               <div className="mt-6">
                 <Link href="/pl/ferroscan/polityka-prywatnosci" className="button-secondary">
                   Polityka prywatności FerroScan
+                </Link>
+              </div>
+            </div>
+          </article>
+        </Reveal>
+
+        <Reveal>
+          <article className="interactive-card grid gap-8 p-5 md:p-7 xl:grid-cols-[0.92fr_1.08fr] xl:items-center">
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-cyan-300/18 bg-slate-950/70 p-5">
+              <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-cyan-300/10 blur-3xl" />
+              <div className="relative rounded-[1.35rem] border border-white/12 bg-[linear-gradient(180deg,rgba(15,27,46,0.98),rgba(7,14,26,0.98))] p-5">
+                <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                  <div>
+                    <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-200">
+                      Platforma Edukacyjna
+                    </p>
+                    <p className="mt-2 text-2xl font-semibold text-white">PAE Practice</p>
+                  </div>
+                  <span className="rounded-full border border-cyan-300/24 bg-cyan-300/10 px-3 py-1 font-mono text-xs text-cyan-100">
+                    WEB
+                  </span>
+                </div>
+
+                <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-sm leading-6 text-slate-300">Symulator egzaminu</p>
+                  <p className="mt-2 text-lg font-semibold leading-7 text-white">
+                    Realistyczne pytania, szybka konfiguracja testu i wynik bez zgadywania,
+                    czy klucz był dobrze przepisany.
+                  </p>
+                </div>
+
+                <div className="mt-5 grid grid-cols-4 gap-2">
+                  {["5", "10", "20", "30"].map((length) => (
+                    <div
+                      key={length}
+                      className="rounded-2xl border border-cyan-300/16 bg-cyan-300/8 px-2 py-4 text-center"
+                    >
+                      <p className="text-2xl font-semibold text-white">{length}</p>
+                      <p className="mt-1 text-xs text-slate-300">pytań</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-5 rounded-2xl border border-amber-300/20 bg-amber-300/8 p-4">
+                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber-100">
+                    100% odblokowuje finał
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-slate-200">
+                    JANUSZ w klimacie SNES/CRT: mały, retro akcent za perfekcyjne opanowanie materiału.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex h-full flex-col">
+              <div>
+                <span className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-200">
+                  Aplikacja webowa
+                </span>
+                <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-[2rem]">
+                  Platforma Edukacyjna PAE
+                </h3>
+                <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200">
+                  Symulator egzaminu przygotowany dla mnie i grupy znajomych studentów, którzy wspólnie
+                  szykują się do zaliczenia. Projekt porządkuje zweryfikowane pytania, obsługuje różne
+                  typy odpowiedzi i pozwala szybko przećwiczyć materiał w trybie dopasowanym do czasu.
+                </p>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {platformHighlights.map((tag) => (
+                  <span key={tag} className="chip">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 rounded-3xl border border-cyan-300/18 bg-cyan-300/8 px-5 py-5">
+                <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-100">Cel</p>
+                <p className="mt-3 text-sm leading-7 text-slate-200">
+                  To narzędzie do praktycznej powtórki przed egzaminem: bez logowania, bez zbędnej
+                  administracji, z naciskiem na sprawne ćwiczenie pytań i jasny wynik końcowy.
+                </p>
+              </div>
+
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Link href="/pae" className="button-primary hero-glow">
+                  Uruchom platformę
+                </Link>
+                <Link href="/pl/platforma" className="button-secondary">
+                  Zobacz opis projektu
                 </Link>
               </div>
             </div>
