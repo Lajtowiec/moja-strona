@@ -266,9 +266,9 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
               </div>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link href="/pae" className="button-primary hero-glow">
+                <a href="/pae" className="button-primary hero-glow">
                   Uruchom platformę
-                </Link>
+                </a>
                 <Link href="/pl/platforma" className="button-secondary">
                   Zobacz opis projektu
                 </Link>

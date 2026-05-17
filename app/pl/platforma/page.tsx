@@ -88,9 +88,9 @@ export default function PlatformaPage() {
                 </p>
 
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                  <Link href="/pae" className="button-primary hero-glow">
+                  <a href="/pae" className="button-primary hero-glow">
                     Uruchom platformę
-                  </Link>
+                  </a>
                   <Link href="/pl#kontakt" className="button-secondary">
                     Kontakt
                   </Link>
