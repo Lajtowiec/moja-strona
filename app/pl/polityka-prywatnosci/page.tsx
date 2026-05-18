@@ -21,6 +21,7 @@ const processingPurposes = [
   "prowadzenia korespondencji technicznej, projektowej lub zawodowej",
   "ustalenia szczegółów ewentualnej współpracy",
   "zapewnienia bezpieczeństwa i prawidłowego działania strony",
+  "prowadzenia anonimowych statystyk odwiedzin i pomiaru wydajności strony",
 ] as const;
 
 const userRights = [
@@ -90,7 +91,7 @@ export default function PrivacyPolicyPage() {
                 ze strony oraz podczas kontaktu z administratorem.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <span className="chip">Ostatnia aktualizacja: 16 maja 2026 r.</span>
+                <span className="chip">Ostatnia aktualizacja: 18 maja 2026 r.</span>
                 <span className="chip">Strona informacyjna</span>
               </div>
             </div>
@@ -177,30 +178,38 @@ export default function PrivacyPolicyPage() {
 
               <PolicySection id="cookies" title="4. Cookies i podobne technologie">
                 <div className="rounded-3xl border border-cyan-300/18 bg-cyan-300/8 p-5">
-                  <p className="font-semibold text-white">Na dzień ostatniej aktualizacji strona nie wykorzystuje własnych cookies analitycznych ani marketingowych.</p>
+                  <p className="font-semibold text-white">Strona korzysta z Vercel Web Analytics oraz Vercel Speed Insights.</p>
                   <p className="mt-3 text-sm leading-7 text-slate-200">
-                    Nie używam na stronie narzędzi takich jak Google Analytics, Meta Pixel, Hotjar,
-                    Clarity ani podobnych systemów śledzących zachowanie użytkowników.
+                    Narzędzia te służą do anonimowego pomiaru odwiedzin, popularności podstron oraz
+                    podstawowych parametrów wydajnościowych, takich jak czas ładowania, stabilność
+                    układu i responsywność strony.
                   </p>
                 </div>
                 <p>
-                  Dostawca hostingu lub infrastruktury może przetwarzać standardowe logi techniczne,
+                  Według informacji dostawcy, Vercel Web Analytics nie używa plików cookies i opiera się
+                  na zagregowanych danych, które nie służą do identyfikowania konkretnego użytkownika.
+                  Speed Insights również służy do anonimowego pomiaru wydajności i nie jest wykorzystywany
+                  do profilowania marketingowego.
+                </p>
+                <p>
+                  Dostawca hostingu lub infrastruktury może dodatkowo przetwarzać standardowe logi techniczne,
                   takie jak adres IP, data i czas żądania, typ przeglądarki albo informacje diagnostyczne.
                   Takie dane służą utrzymaniu bezpieczeństwa, stabilności i prawidłowego działania strony.
                 </p>
                 <p>
-                  Jeżeli w przyszłości na stronie zostaną dodane narzędzia analityczne, marketingowe,
-                  mapy, osadzone materiały wideo lub inne elementy korzystające z cookies niewymaganych
-                  technicznie, polityka zostanie zaktualizowana, a użytkownik otrzyma odpowiedni komunikat
-                  i możliwość wyboru.
+                  Strona nie korzysta obecnie z Google Analytics, Meta Pixel, Hotjar, Clarity ani narzędzi
+                  reklamowych. Jeżeli w przyszłości zostaną dodane narzędzia marketingowe lub elementy
+                  korzystające z cookies niewymaganych technicznie, polityka zostanie zaktualizowana,
+                  a użytkownik otrzyma odpowiedni komunikat i możliwość wyboru.
                 </p>
               </PolicySection>
 
               <PolicySection id="odbiorcy" title="5. Odbiorcy danych i przekazywanie danych">
                 <p>
                   Dane mogą być przetwarzane przez dostawców usług technicznych, takich jak hosting,
-                  obsługa poczty elektronicznej, repozytorium kodu lub narzędzia służące do publikacji strony.
-                  Dostęp do danych jest ograniczony do zakresu koniecznego do świadczenia tych usług.
+                  obsługa poczty elektronicznej, repozytorium kodu, narzędzia służące do publikacji strony
+                  oraz usługi statystyk i pomiaru wydajności dostarczane przez Vercel. Dostęp do danych
+                  jest ograniczony do zakresu koniecznego do świadczenia tych usług.
                 </p>
                 <p>
                   Administrator nie sprzedaje danych osobowych i nie wykorzystuje ich do profilowania
