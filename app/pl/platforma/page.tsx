@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/home/site-footer";
+import { platformScreens } from "@/components/platform/platform-screens";
+import { PlatformScreensShowcase } from "@/components/platform/platform-screens-showcase";
 
 export const metadata: Metadata = {
   title: "Platforma Edukacyjna PAE | Symulator egzaminu",
@@ -36,29 +38,6 @@ const features = [
     title: "Przejrzysty wynik",
     description:
       "Po zakończeniu testu użytkownik otrzymuje jasne podsumowanie, które pomaga ocenić gotowość do zaliczenia.",
-  },
-] as const;
-
-const platformScreens = [
-  {
-    src: "/pae/screens/subject.jpg",
-    label: "Wybór przedmiotu",
-    description: "Panel startowy z wyborem zestawu pytań egzaminacyjnych.",
-  },
-  {
-    src: "/pae/screens/question.jpg",
-    label: "Tryb testu",
-    description: "Pytanie, odpowiedzi, wyjaśnienie i kontrola postępu.",
-  },
-  {
-    src: "/pae/screens/result.jpg",
-    label: "Wynik egzaminu",
-    description: "Czytelne podsumowanie poprawnych i błędnych odpowiedzi.",
-  },
-  {
-    src: "/pae/screens/history.jpg",
-    label: "Historia wyników",
-    description: "Trend ostatnich testów oraz lista poprzednich podejść.",
   },
 ] as const;
 
@@ -121,28 +100,7 @@ export default function PlatformaPage() {
             </article>
 
             <aside className="interactive-card overflow-hidden p-5 md:p-6">
-              <div className="relative overflow-hidden rounded-[1.5rem] border border-cyan-300/18 bg-slate-950/60 p-3">
-                <div className="h-[34rem] overflow-y-auto rounded-[1.15rem] bg-white [scrollbar-color:rgba(98,220,255,0.5)_rgba(15,23,42,0.6)] [scrollbar-width:thin]">
-                  <Image
-                    src="/pae/screens/question.jpg"
-                    alt="Platforma Edukacyjna PAE - ekran pytania"
-                    width={720}
-                    height={1303}
-                    priority
-                    sizes="(max-width: 768px) 100vw, 40vw"
-                    className="h-auto w-full"
-                  />
-                </div>
-                <div className="pointer-events-none absolute inset-x-3 bottom-3 h-24 rounded-b-[1.15rem] bg-gradient-to-t from-slate-950/82 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-100">
-                    Podgląd aplikacji
-                  </p>
-                  <p className="mt-2 text-lg font-semibold text-white">
-                    Tryb testu z wyjaśnieniem odpowiedzi.
-                  </p>
-                </div>
-              </div>
+              <PlatformScreensShowcase priority />
             </aside>
           </div>
         </section>
