@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/home/site-footer";
 
@@ -38,7 +39,28 @@ const features = [
   },
 ] as const;
 
-const testLengths = ["5", "10", "20", "30"] as const;
+const platformScreens = [
+  {
+    src: "/pae/screens/subject.jpg",
+    label: "Wybór przedmiotu",
+    description: "Panel startowy z wyborem zestawu pytań egzaminacyjnych.",
+  },
+  {
+    src: "/pae/screens/question.jpg",
+    label: "Tryb testu",
+    description: "Pytanie, odpowiedzi, wyjaśnienie i kontrola postępu.",
+  },
+  {
+    src: "/pae/screens/result.jpg",
+    label: "Wynik egzaminu",
+    description: "Czytelne podsumowanie poprawnych i błędnych odpowiedzi.",
+  },
+  {
+    src: "/pae/screens/history.jpg",
+    label: "Historia wyników",
+    description: "Trend ostatnich testów oraz lista poprzednich podejść.",
+  },
+] as const;
 
 export default function PlatformaPage() {
   return (
@@ -98,65 +120,53 @@ export default function PlatformaPage() {
               </div>
             </article>
 
-            <aside className="interactive-card overflow-hidden p-6 md:p-7">
-              <div className="rounded-[1.5rem] border border-cyan-300/18 bg-slate-950/72 p-4">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <div>
-                    <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-200">
-                      Tryb testu
-                    </p>
-                    <p className="mt-2 text-xl font-semibold text-white">PAE Practice</p>
-                  </div>
-                  <div className="rounded-full border border-cyan-300/28 bg-cyan-300/10 px-3 py-1 font-mono text-xs text-cyan-100">
-                    WEB
-                  </div>
+            <aside className="interactive-card overflow-hidden p-5 md:p-6">
+              <div className="relative overflow-hidden rounded-[1.5rem] border border-cyan-300/18 bg-slate-950/60 p-3">
+                <div className="h-[34rem] overflow-y-auto rounded-[1.15rem] bg-white [scrollbar-color:rgba(98,220,255,0.5)_rgba(15,23,42,0.6)] [scrollbar-width:thin]">
+                  <Image
+                    src="/pae/screens/question.jpg"
+                    alt="Platforma Edukacyjna PAE - ekran pytania"
+                    width={720}
+                    height={1303}
+                    priority
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    className="h-auto w-full"
+                  />
                 </div>
-
-                <div className="mt-5 grid gap-3">
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm leading-6 text-slate-300">Pytanie 12 / 30</p>
-                    <p className="mt-2 text-lg font-semibold text-white">
-                      Wybierz prawidłowe odpowiedzi zgodnie z kluczem egzaminacyjnym.
-                    </p>
-                  </div>
-                  <div className="grid gap-2">
-                    {["odpowiedź jednokrotna", "odpowiedź wielokrotna", "wynik i omówienie"].map(
-                      (item) => (
-                        <div
-                          key={item}
-                          className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3"
-                        >
-                          <span className="h-3 w-3 rounded-full border border-cyan-200 bg-cyan-300/20" />
-                          <span className="text-sm text-slate-200">{item}</span>
-                        </div>
-                      ),
-                    )}
-                  </div>
-                </div>
-
-                <div className="mt-5 grid grid-cols-4 gap-2">
-                  {testLengths.map((length) => (
-                    <div
-                      key={length}
-                      className="rounded-2xl border border-cyan-300/16 bg-cyan-300/8 px-3 py-4 text-center"
-                    >
-                      <p className="text-2xl font-semibold text-white">{length}</p>
-                      <p className="mt-1 text-xs text-slate-300">pytań</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-5 rounded-2xl border border-cyan-300/16 bg-cyan-300/8 p-4">
+                <div className="pointer-events-none absolute inset-x-3 bottom-3 h-24 rounded-b-[1.15rem] bg-gradient-to-t from-slate-950/82 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
                   <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-100">
-                    Podsumowanie
+                    Podgląd aplikacji
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-slate-200">
-                    Wynik końcowy pozwala szybko sprawdzić skuteczność powtórki i wrócić do materiału,
-                    który wymaga jeszcze utrwalenia.
+                  <p className="mt-2 text-lg font-semibold text-white">
+                    Tryb testu z wyjaśnieniem odpowiedzi.
                   </p>
                 </div>
               </div>
             </aside>
+          </div>
+        </section>
+
+        <section className="section-shell pb-12">
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {platformScreens.map((screen) => (
+              <article key={screen.src} className="interactive-card overflow-hidden p-4">
+                <div className="overflow-hidden rounded-[1.35rem] border border-white/12 bg-white">
+                  <Image
+                    src={screen.src}
+                    alt={`Platforma Edukacyjna PAE - ${screen.label}`}
+                    width={720}
+                    height={1303}
+                    sizes="(max-width: 768px) 100vw, 24vw"
+                    className="h-96 w-full object-cover object-top"
+                  />
+                </div>
+                <div className="px-2 pt-5">
+                  <h2 className="text-xl font-semibold tracking-tight text-white">{screen.label}</h2>
+                  <p className="mt-3 text-sm leading-7 text-slate-200">{screen.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
